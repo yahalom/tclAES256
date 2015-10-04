@@ -448,7 +448,7 @@ critcl::ccommand aes256Encrypt {cd interp obj objv} {
 	}
 
 	// copy for byval
-	uint8_t *buf = malloc(sizeof(uint8_t)*lBuf*2);
+	uint8_t *buf = malloc(sizeof(uint8_t)*lBuf);
 	memcpy((char*)buf, (char*)in, lBuf); 
 
 	/* add ANSI X.923 byte padding
@@ -489,7 +489,7 @@ critcl::ccommand aes256Decrypt {cd interp obj objv} {
 	}
 
 	// copy for byval
-	uint8_t *buf = malloc(sizeof(uint8_t)*lBuf*2);
+	uint8_t *buf = malloc(sizeof(uint8_t)*lBuf);
 	memcpy((char*)buf, (char*)in, lBuf); 
 
 	// decrypt
